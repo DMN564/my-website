@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles_copy.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#!" style="color: rgb(49, 39, 39);"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Physics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Poetry</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   <!-- Content section-->
+    <heading style="position: fixed; top: 160px; right: 600px;">Hi! I am the odd sage, welcome to my cauldron!</heading>
+  <svg id="connections" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div class="center-container">
+    <button class="center-button floating ripple-button" id="particle_physics">Particle Physics</button>
+  </div>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 260px; right: 600px;" id="beyond_sm">Beyond the Standard Model</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 340px; left: 350px;" id="history">History</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 340px; right: 350px;" id="current">Current Developments</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 440px; right: 600px;" id="sm">The Standard Model</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 440px; left: 350px;" id="fermions">Fermions</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 530px; left: 250px;" id="hadrons">Hadrons</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 610px; left: 350px;" id="leptons">Leptons</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 530px; right: 250px;" id="forces">Forces</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 280px; right: 230px;" id="higgs">Higgs</button>
+
+  <button class="center-button floating ripple-button" style="position: fixed; top: 440px; right: 350px;" id="bosons">Bosons</button>
+
+  <div id="container">
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -328,3 +328,37 @@ function defaults(object, src) {
   }
   return object;
 }
+
+function floatElements() {
+  const floatables = document.querySelectorAll('.floating');
+
+  floatables.forEach(el => {
+    const dx = Math.random() * 20 - 10; // range: [-10, 10]
+    const dy = Math.random() * 30 - 10;
+
+    el.style.transform = `translate(${dx}px, ${dy}px)`;
+  });
+
+  setTimeout(floatElements, 2000); // update every 3s
+}
+
+window.addEventListener('load', floatElements);
+
+document.querySelectorAll('.ripple-button').forEach(button => {
+  button.addEventListener('click', function (e) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(button.offsetWidth, button.offsetHeight);
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+    button.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+});
